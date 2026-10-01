@@ -1,0 +1,14 @@
+type Usuario {
+    id: ID!
+    nome: String!
+    email: String!
+}
+
+type Query {
+    obterUsuarioPorId(id: ID!): Usuario
+    listarUsuarios: [Usuario]
+}
+
+type Mutation {
+    criarUsuario(nome: String!, email: String!): Usuario
+}
